@@ -8,7 +8,7 @@ document.addEventListener('deviceready', function () {
         console.log('DOM Ready => Alles Ready...');
 
         navigator.geolocation.getCurrentPosition(function(coords) {
-            $('<div>').html(`${coords.latitude}/${coords.longitude}`).appendTo('body');
+            $('<div>').html(`${coords.coords.latitude}/${coords.coords.longitude}`).appendTo('body');
         },function() {
             $('<div>').html('Error - No Position').appendTo('body')
         });
